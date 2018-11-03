@@ -5,14 +5,14 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 
 def naver_ITnews() :
-    FILE_NAME = "news.txt"
+    FILE_NAME = "news_test.txt"
     f = open(FILE_NAME, "a", encoding="utf8")
 
     driver = webdriver.Chrome('C:/Users/KyeongMin/Desktop/App/chrome/chromedriver.exe')
 
     driver.implicitly_wait(3)
 
-    news_url = 'https://news.naver.com/main/ranking/popularDay.nhn?rankingType=popular_day&sectionId=105&date=20181030'
+    news_url = 'https://news.naver.com/main/ranking/popularDay.nhn?rankingType=popular_day&sectionId=105&date=20181031'
     driver.get(news_url)
 
     html = driver.page_source
